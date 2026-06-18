@@ -9,3 +9,4 @@ print(num1 + num2) #output: 300
 # variable names should not start with a capital letter
 # variable names should not start with any special character...#,&,/,@, etc...
 # a single variable name should not have spaces
+# use relatable variable names
