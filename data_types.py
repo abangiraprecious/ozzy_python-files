@@ -15,5 +15,6 @@
 
 # storing more than one value in a single variable - sequence data type
 
-languages = ["English", "Swahili", "Luganda", "Runyankore"] # - these can take on more than one data type
+languages = ["English", "Swahili", "Luganda", "Runyankore"]
+print(languages) # - these can take on more than one data type
 # - a list can take on another list
