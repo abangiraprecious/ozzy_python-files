@@ -14,3 +14,5 @@ print(num1 + num2) #output: 300
 fruits = ["mangoe", "apple", "dragonfruit"]
 print(fruits[0])
 print(fruits[2])
+
+numbers = [1, 2, 3, [10, 20]] # the second list (inner) is in position 3. Rule of indices at work
