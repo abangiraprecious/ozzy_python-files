@@ -1,5 +1,5 @@
 # A list is ordered and changeable []
-# - duplicates are okay  
+# - duplicates are okay within the list
 # - you can reassign
 #1. Your favourite things
 
@@ -64,5 +64,16 @@ fruit.insert(0, "apple") #insert an element
 
 print(fruit)
 
-fruit.sort() #alphabetical order
+fruit.sort() #alphabetical order 
 print(fruit)
+
+fruit.reverse() #reversed in the order in which you placed them unless you first sort them
+print(fruit)
+
+fruit.clear()
+print(fruit)
+
+fruits = ["mangoe", "mangoe", "apple", "banana", "guava", "kiwi"]
+print(fruits.index("guava"))#3
+
+print(fruits.count("mangoe")) #2
