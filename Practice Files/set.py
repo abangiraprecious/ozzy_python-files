@@ -3,45 +3,18 @@
 # - you can't put a list inside a set {[]} 
 
 
-fruit = ["mangoe", "apple", "banana", "guava", "kiwi"]
-print(fruit)
-print(fruit[2])
-print(fruit[:2]) #first two elements
-print(fruit[::2]) #every 2nd element starting from 0 as the first element to be printed
-
-# for x in fruit: #for every frui (x) in "fruit" variable
-#     print(fruit)
+fruit = {"mangoe", "apple", "banana", "guava", "kiwi"}
 
 print(len(fruit))
 
-print("kiwi" in fruit) #Boolean
-
-#reassigning
-fruit[0] = "orange"
-
-# for x in fruit: #for every frui (x) in "fruit" variable
-#     print(fruit)
-
-fruit.append("tangerine") #add to the end
-fruit.remove("apple") 
-
+fruit.add("pineapple")
 
 print(fruit)
 
-fruit.insert(0, "apple") #insert an element
+fruit.remove("pineapple")
 
 print(fruit)
 
-fruit.sort() #alphabetical order 
-print(fruit)
+fruit.pop()
 
-fruit.reverse() #reversed in the order in which you placed them unless you first sort them
-print(fruit)
-
-fruit.clear()
-print(fruit)
-
-fruits = ["mangoe", "mangoe", "apple", "banana", "guava", "kiwi"]
-print(fruits.index("guava"))#3
-
-print(fruits.count("mangoe")) #2
+print(fruit) 
