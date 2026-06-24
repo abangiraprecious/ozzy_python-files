@@ -12,5 +12,14 @@ name =input("Enter name: ")
 
 while name == "":
     print("No name")
-    name =input("Enter name: ")
+    name =input("Enter name: ") #without something like this, you get an infinite loop
 print(f"Hello {name}")
+
+# q to quit
+
+food = input("Favorite food: ")
+
+while not food == "q": #can also be written as [while food != "q":]
+    print(f"Your fave food is {food}")
+    food = input ("Another favorite food: ")
+print("bye")
