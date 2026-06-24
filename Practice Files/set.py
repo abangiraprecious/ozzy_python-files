@@ -1,15 +1,6 @@
-# A set is unordered and immutable {} Unordereed means that it does track positioning in insertion sequence. So indices are out of the mix
-# - but you can add/remove
-# - no duplicates in that set. it ignores it
-
-
-#1. Your favourite things
-
-# Create a list called favourites with 4 of your favourite foods. Then print the first item and the last item.
-
-favourites = ["my boyfried", "coffee", "fruit tea", "books"]
-print(favourites[0])
-print(favourites[3])
+# A set {}  is unordered is mutable because you can add/remove and immutable because what you add inside must be simple/unchangeable. Unordered means that it does track positioning in insertion sequence. So indices are out of the mix
+# - no duplicates in that set. it ignores the duplicate
+# - you can't put a list inside a set {[]} 
 
 
 fruit = ["mangoe", "apple", "banana", "guava", "kiwi"]
