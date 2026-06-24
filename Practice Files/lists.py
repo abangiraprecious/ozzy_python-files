@@ -1,3 +1,6 @@
+# A list is ordered and changeable []
+# - duplicates are okay  
+# - you can reassign
 #1. Your favourite things
 
 # Create a list called favourites with 4 of your favourite foods. Then print the first item and the last item.
@@ -30,3 +33,36 @@ m = [1, 2, 3, [10, 20], 30, [40, [60, 70]]]
 print(m[5][1][0])# 60
 print(m[5][1][1])# 70
 print(m[5][1][-1])# 70
+
+
+fruit = ["mangoe", "apple", "banana", "guava", "kiwi"]
+print(fruit)
+print(fruit[2])
+print(fruit[:2]) #first two elements
+print(fruit[::2]) #every 2nd element starting from 0 as the first element to be printed
+
+# for x in fruit: #for every frui (x) in "fruit" variable
+#     print(fruit)
+
+print(len(fruit))
+
+print("kiwi" in fruit) #Boolean
+
+#reassigning
+fruit[0] = "orange"
+
+# for x in fruit: #for every frui (x) in "fruit" variable
+#     print(fruit)
+
+fruit.append("tangerine") #add to the end
+fruit.remove("apple") 
+
+
+print(fruit)
+
+fruit.insert(0, "apple") #insert an element
+
+print(fruit)
+
+fruit.sort() #alphabetical order
+print(fruit)
