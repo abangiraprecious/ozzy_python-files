@@ -15,6 +15,6 @@ fruit.remove("pineapple")
 
 print(fruit)
 
-fruit.pop()
+fruit.pop() # randomly
 
 print(fruit) 
