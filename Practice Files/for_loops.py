@@ -46,7 +46,7 @@ for letter in name:
 for letter in reversed(name):
     print(letter)
 
-#suppose we are going to count to 20
+#suppose we are going to count to 26
 
 for x in range (1,6):
     if x == 3:
