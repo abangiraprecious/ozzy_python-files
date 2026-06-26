@@ -2,6 +2,8 @@
 # a function in py is created with the use of the word "def" followed by a valid name of the function (must adhere to variable syntax)
 # a function is self contained
 # - variables within a function cannot be accessed out of that function by default
+# in memory, the storage address is big enough to accomodate everything inside the fuction as well
+
 
 def stuff():
     num1, num2 = 10, 20
