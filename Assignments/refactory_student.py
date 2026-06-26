@@ -7,7 +7,7 @@ while len(phone_no) != 10 :
     print("Digits are not 10")
     phone_no = input("Enter The Correct Phone Number (10 digits): ")
 
-track = input("Enter Your Python Track: ")
+track = input("Enter Your Python Track (Python/Javascript): ")
 
 intake = input("What intake are you in: ")
 
@@ -17,7 +17,7 @@ intake = input("What intake are you in: ")
 if age < 15:
     print("You are not eligible because you are below 15 years")
 
-elif track not in ("Python", "Javascript"):
+elif track not in ("Python", "Javascript", "JavaScript"): #case sensitive
     print("Not eligible for CSE because your track is invalid")
 
 else:

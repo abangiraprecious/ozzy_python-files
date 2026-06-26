@@ -36,4 +36,10 @@ def subtract():
     num3, num4 = 4, 2
     print(num3 - num4)
 subtract() #2
+
+def exponet():
+    num3, num4 = 4, 2
+    print(num3 ** num4)
+exponet() #16
+
  
