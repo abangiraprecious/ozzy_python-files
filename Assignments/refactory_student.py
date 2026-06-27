@@ -1,3 +1,5 @@
+#Abangira Precious Nimmusiima
+
 name = input("Enter Your Full Name: ")
 age = int(input("Enter Your Full Age: "))
 location = input("Enter Your Location: ")
@@ -19,10 +21,4 @@ elif track.lower() not in ["python", "javascript"]:
     print("You are not eligible for CSE because your track is invalid.")
 
 else:
-    print(f"Dear {name}, you are eligible for CSE because you are above the age of 15 and your track is {track} which is part of CSE!")
-
-
-
-
-
-
+    print(f"Dear {name}, you are eligible for CSE because you are above the age of 15 and your track is {track} which is part of CSE! We will send you an email very soon confirming your admission.")
