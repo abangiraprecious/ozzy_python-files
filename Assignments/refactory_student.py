@@ -1,4 +1,4 @@
-#Abangira Precious Nimmusiima
+# Abangira Precious Nimmusiima
 
 name = input("Enter Your Full Name: ")
 age = int(input("Enter Your Full Age: "))
