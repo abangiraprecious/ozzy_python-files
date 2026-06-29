@@ -11,7 +11,7 @@ def register_student():
         phone_no = input("Enter The Correct Phone Number (10 digits): ")
 
     track = input("Enter Your CSE Track (Python/Javascript): ")
-    intake = input("What intake are you in: ")
+    intake = input("What intake are you applying for: ")
 
     if age < 15:
         print("Unfortunately, you are not eligible because you are below 15 years")
