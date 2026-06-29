@@ -1,8 +1,8 @@
 # Abangira Precious Nimmusiima
 
 name = input("Enter Your Full Name: ")
-age = int(input("Enter Your Full Age: "))
-location = input("Enter Your Location: ")
+age = int(input("How old are you?: "))
+location = input("What is your adress: ")
 phone_no = input("Enter Your Phone Number (0771234567): ")
 
 # I added this while loop to test my learning but also because it is common to put incorrect phone numbers. So I used the while loop to determine that it does not happen and, it is also not an infinite loop. 
