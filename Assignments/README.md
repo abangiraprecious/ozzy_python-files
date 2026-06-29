@@ -17,7 +17,7 @@ Otherwise, the program should indicate that the person is eligible.
 
 Display an appropriate message informing the user whether they are eligible or not, and state the reason if they are ineligible.
 
-# Programming Fundamentals Assignment
+# Programming Fundamentals Assignment (Assignment 3)
 
 Explain the following core programming concepts in the simplest way possible.
 For each concept, provide:
@@ -69,3 +69,8 @@ Cover the following:
 - Keep explanations simple and beginner-friendly
 - All code examples must be runnable and correct
 - Label each section clearly
+
+
+
+### Assignment Four
+Put into cinsideration a market vndero, discuss the concpet of function (with examples). Identify any applicablty of function scommunicating with one another in the context of a market. Two or more functions with related statements. E.g a peice of code that wil calc profit: cost, sellling price, turnover.
