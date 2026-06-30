@@ -4,8 +4,9 @@
 
 #### Modules
 
-A module is simply a separate python fule  that holds related code. A module is one file
-You can import files from a different python file into other files.  When you do so, the pattern is filename.functionname()
+A module is simply a separate python file that holds related code. A module is one file that is meant to be imported by other files. It holds functions, variables, or classes that other files can make use of.
+Not to be mistaken with a script. A script is meant to be run directly.
+But the same file can do both. In practice, people say module when they mean a file designed to be imported and script when they mean a file designed to be run.
 
 There are different ways to import:
 1. Import the whole module 
