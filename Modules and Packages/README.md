@@ -27,5 +27,18 @@ import filename as diff_name
 
 #### Packages
 
+A package is a folder that holds multiple modules. For python to recognize a folder as a package, it must have the file __init__.py inside it. The file can be empty, it just tells python that this folder is a package. 
+
+---
+
+#### Built in modules
+
+Python comes with over 20 module ready to use. 
+
+For example:
+- math 
+- random
+- datetime
+
 Packaging and modeling
 Does this mean when we're working with pandas and numpy, we are importing functions?
