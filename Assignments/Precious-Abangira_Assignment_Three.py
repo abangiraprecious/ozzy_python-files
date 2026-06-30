@@ -1,8 +1,5 @@
-
-
-
 # Operators
-# An operator is just a symbol that tells Python to do something with one or more values. For example, in "5 + 3", the "+" is the operator, and 5 and 3 are the values it works on.
+# An operator is  a symbol that tells Python to do something with one or more values. For example, in "5 + 3", the "+" is the operator, and 5 and 3 are the values it works on.
 
 print("OPERATORS")
 
@@ -47,9 +44,9 @@ print("x >= y :", x >= y)
 print("x <= y :", x <= y)
 
 # Logical Operators - used to combine conditions
-# and  -> True only if BOTH sides are True
-# or   -> True if AT LEAST ONE side is True
-# not  -> flips True to False, or False to True
+# and  - True only if both sides are True
+# or   - True if at least one side is True
+# not  - flips True to False, or False to True
 
 print("\nLogical Operators")
 age = 20
@@ -92,28 +89,28 @@ print("\nDATA TYPES")
 
 print("\nint")
 students = 40
-print("students =", students, "| type:", type(students))
+print("students =", students)
 
 # float - a number with a decimal point
 
 print("\nfloat")
 price = 9.99
-print("price =", price, "| type:", type(price))
+print("price =", price)
 
 # str - text, written between quotes
 
 print("\nstr")
 name = "Alice"
-greeting = "Hello, " + name + "!"
-print("greeting =", greeting, "| type:", type(name))
+greeting = "Hello, " + name
+print("greeting =", greeting)
 
 # bool - only two possible values, True or False
 
 print("\nbool")
 is_passing = 60 >= 50
-print("is_passing =", is_passing, "| type:", type(is_passing))
+print("is_passing =", is_passing)
 
-# list - an ordered collection you CAN change, written in [ ]
+# list - an ordered collection you can change, written in [ ]
 
 print("\nlist")
 fruits = ["apple", "banana", "cherry"]
@@ -123,7 +120,7 @@ print("after append:", fruits)
 fruits[0] = "kiwi"
 print("after changing index 0:", fruits)
 
-# tuple - an ordered collection you CANNOT change, written in ( ). Use a tuple when the data should stay fixed, like coordinates.
+# tuple - an ordered collection you cannot change, written in ( ). We use a tuple when the data should stay fixed, like coordinates.
 
 print("\ntuple")
 coordinates = (10, 20)
