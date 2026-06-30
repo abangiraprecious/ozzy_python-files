@@ -6,4 +6,4 @@ print(random.randint(1, 10)) #random integer in that that range
 
 import datetime
 print(datetime.date.today())
-print(datetime.now().time())
+print(datetime.datetime.now().time())
