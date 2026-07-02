@@ -73,4 +73,4 @@ Cover the following:
 
 
 ### Assignment Four
-Put into cinsideration a market vndero, discuss the concpet of function (with examples). Identify any applicablty of function scommunicating with one another in the context of a market. Two or more functions with related statements. E.g a peice of code that wil calc profit: cost, sellling price, turnover.
+Put into cinsideration a market vendor, discuss the concpet of function (with examples). Identify any applicablty of functions communicating with one another in the context of a market. Two or more functions with related statements. E.g a peice of code that wil calc profit: cost, sellling price, turnover.
