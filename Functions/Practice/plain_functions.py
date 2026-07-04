@@ -41,5 +41,30 @@ def describe_weather(c):
     return(f"The weather right is: {cel_to_fah(c)}")
 print(describe_weather(25))
 
+def percent_of (amount, percent):
+    return (amount * percent) / 100
+value = percent_of(50000, 20)
+print(value)
+
+
+def add_tax(price, tax_rate):
+    return (price * tax_rate) / 100
+tax = add_tax(100000, 0.18)
+print(tax)
+
+def subtotal(quantity, unit_price):
+    return (quantity * unit_price)
+
+def apply_discount(amount, discount_percent):
+    return amount - (amount * discount_percent / 100)
+
+def total_with_tax(quantity, unit_price, discount_percent, tax_rate): 
+    sub = subtotal(quantity, unit_price)
+    discounted = apply_discount(sub, discount_percent)
+    final = discounted + (discounted * tax_rate)
+    return final
+
+print(total_with_tax(10, 25000, 5, 0.18))
+
 
 
