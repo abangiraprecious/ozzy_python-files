@@ -16,7 +16,7 @@
 def addition (num1, num2):
     print(num1 + num2)
 
-#values you pass on to the parameters are called argumentsactual paremeters
+#values you pass on to the parameters are called arguments 
 addition(3, 6)
 
 

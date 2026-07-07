@@ -1,3 +1,26 @@
+def multiply():
+     factor_one = 3
+     factor_two = 5
+     print(factor_one * factor_two)
+multiply()
+
+def add():
+     num1, num2 = 10, 20
+     print(num1 + num2)
+add()
+
+def add(num1, num2):
+     return(num1 + num2)
+print(f"Your sum is: {add(2, 4)}")
+
+def name(first, last):
+     return (first + " " + last)
+all = name("Liz", "Angel")
+print(all)
+
+
+
+
 # Write a function called welcome that takes no parameters and prints "Welcome to Uganda".
 
 def welcome():
