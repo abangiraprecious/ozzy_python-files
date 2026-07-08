@@ -1,7 +1,4 @@
 # Django Basics — Beginner Study Guide
-
-> Rebuilt from class notes for self-study. A few things in the original notes were typos or slightly wrong (mostly the HTTP status codes and one point about apps). Wherever I corrected something, you'll see a **📝 Note from the notes** callout so you know what changed and why.
-
 ---
 
 ## 1. Python and How We Get Extra Tools
