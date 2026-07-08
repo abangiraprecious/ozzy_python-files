@@ -16,6 +16,8 @@ pip install <package-name>
 
 Think of pip as an app store for Python code.
 
+> **💻 Mac vs Windows — command names:** On most Macs, the command is `python3` (and `pip3`), because plain `python` may point to an old version. On Windows it's usually just `python` (and `pip`). Throughout this guide, when you see `python`, use `python3` on your Mac — **except** once a virtual environment is active (Section 3), where plain `python` and `pip` work on both systems.
+
 ### Web frameworks you can install
 
 A *web framework* is a package that gives you a ready-made structure for building websites. Common Python ones:
@@ -33,35 +35,78 @@ None of these come with Python by default; you install them with pip.
 
 Django is **highly structured** — it follows a fixed set of guidelines and conventions about where things go and how they connect. That structure feels strict at first, but it means once you learn the pattern, every Django project looks familiar.
 
-Installing Django is a **one-time installation** on your machine. After that, you can create as many projects as you want.
-
-```
-pip install django
-```
+Django is installed with pip — but the recommended way is to install it **inside a virtual environment** (explained in Section 3), not system-wide. That keeps each project's tools separate and tidy. We'll do the actual install there.
 
 ---
 
 ## 3. Creating Your First Django Project (Step by Step)
 
-### Step 1 — Install Django
-
-```
-pip install django
-```
-
-### Step 2 — Choose a folder for your projects
+### Step 1 — Open a terminal in your project folder
 
 Pick (or create) a folder on your computer where your projects will live, then open a command line **inside that folder**:
 
-- Open the folder in your file explorer.
+**On Mac:**
+- Open the **Terminal** app.
+- Type `cd ` (with a space), then drag the folder from Finder into the Terminal window and press Enter — this moves you into that folder.
+- *(Or: right-click the folder in Finder → Services → "New Terminal at Folder" if you've enabled it.)*
+
+**On Windows:**
+- Open the folder in File Explorer.
 - Click into the address/path bar.
 - Type `cmd` and press Enter — this opens the command prompt already pointed at that folder.
 
 From here on, you type commands into this window.
 
-> **Helpful command:** `dir` lists everything inside the current folder (on Mac/Linux the equivalent is `ls`). Use it any time you're not sure what's around you.
+> **Helpful command:** list everything inside the current folder — `ls` on Mac, `dir` on Windows. Use it any time you're not sure what's around you.
 
-### Step 3 — Create the project
+### Step 2 — Create and activate a virtual environment
+
+A **virtual environment (venv)** is a private, isolated box for one project's packages. Django (and anything else you pip-install) goes inside this box instead of into your whole system, so different projects never clash.
+
+Create it (do this once per project):
+
+```
+# Mac
+python3 -m venv venv
+
+# Windows
+python -m venv venv
+```
+
+This makes a folder called `venv` inside your project folder.
+
+Now **activate** it (do this every time you sit down to work):
+
+```
+# Mac
+source venv/bin/activate
+
+# Windows (Command Prompt)
+venv\Scripts\activate
+
+# Windows (PowerShell)
+venv\Scripts\Activate.ps1
+```
+
+When it's active, you'll see `(venv)` at the start of your command line. From now on — on **both** Mac and Windows — you can just type `python` and `pip` (no `3` needed), because they now point to the versions inside your venv.
+
+When you're done for the day, you can leave the environment with:
+
+```
+deactivate
+```
+
+### Step 3 — Install Django (inside the active venv)
+
+With `(venv)` showing, install Django:
+
+```
+pip install django
+```
+
+Because you're inside the venv, this install belongs to *this project only*.
+
+### Step 4 — Create the project
 
 A *project* is the master folder where all your instructions live.
 
@@ -93,9 +138,9 @@ Open your browser and visit either of these to see your site:
 localhost:8000
 ```
 
-To stop the server, go back to the command window and press **Ctrl + C**.
+To stop the server, go back to the command window and press **Ctrl + C** (this is the same on Mac and Windows).
 
-### Step 4 — Create an application inside the project
+### Step 5 — Create an application inside the project
 
 An **application (app)** is a self-contained unit of functionality. Examples of functionalities: login, registration, reporting, and so on.
 
@@ -105,7 +150,7 @@ python manage.py startapp <name_of_app>
 
 > **📝 Note from the notes:** The original notes said both "can create one or more applications" and "each project takes one application" — those contradict each other. The correct version is: **a single project can contain many apps.** That's actually the whole point of the app system — you split a big project into smaller, focused apps (one for login, one for reports, etc.). Your HTML files for an app live inside that app's folder.
 
-### Step 5 — Install (register) the app
+### Step 6 — Install (register) the app
 
 Creating an app isn't enough; you have to tell the project it exists by registering it in the settings file (more on that file next). Until you do, Django ignores it.
 
@@ -128,7 +173,7 @@ When you create a project, Django auto-generates a folder **with the same name a
 - **`SECRET_KEY`** — every Django project is created with a unique secret key used for security. Keep it private.
 - **`DEBUG = True`** — when `True`, Django shows detailed error pages that help you find and fix problems. When you set it to `False`, errors are hidden and no debugging clues appear. Keep it `True` while learning; switch it to `False` only when the site goes live to the public.
 - **`ALLOWED_HOSTS`** — lets you restrict which server(s) are allowed to run your application.
-- **`INSTALLED_APPS`** — the list of apps in use. This includes apps that **come bundled with Django**, so you don't have to download them. Registering your own app (Step 5) means adding it here.
+- **`INSTALLED_APPS`** — the list of apps in use. This includes apps that **come bundled with Django**, so you don't have to download them. Registering your own app (Step 6) means adding it here.
 - **`MIDDLEWARE`** — a chain of components that lets Django keep track of and process each request/response as it passes through your application.
 
 ---
@@ -224,8 +269,12 @@ Browser  displays the page (with status code 200 if all went well)
 
 ## Quick Command Cheat Sheet
 
+**Mac (Terminal):**
 ```bash
-pip install django                          # install Django (one time)
+cd my-projects-folder                       # move into your projects folder
+python3 -m venv venv                        # create a virtual environment (once)
+source venv/bin/activate                    # activate it (every session) → (venv) appears
+pip install django                          # install Django inside the venv
 python -m django startproject myproject     # create a project
 cd myproject                                # move into it
 python manage.py startapp myapp             # create an app
@@ -233,10 +282,27 @@ python manage.py migrate                    # set up database tables
 python manage.py runserver                  # start the dev server
 # visit localhost:8000 in the browser
 # Ctrl + C to stop the server
+deactivate                                  # leave the venv when done
+```
+
+**Windows (Command Prompt):**
+```bat
+cd my-projects-folder                       :: move into your projects folder
+python -m venv venv                         :: create a virtual environment (once)
+venv\Scripts\activate                       :: activate it (every session) -> (venv) appears
+pip install django                          :: install Django inside the venv
+python -m django startproject myproject     :: create a project
+cd myproject                                :: move into it
+python manage.py startapp myapp             :: create an app
+python manage.py migrate                    :: set up database tables
+python manage.py runserver                  :: start the dev server
+:: visit localhost:8000 in the browser
+:: Ctrl + C to stop the server
+deactivate                                  :: leave the venv when done
 ```
 
 ---
 
 ## The Big Picture (in one paragraph)
 
-You install Django once with pip. You create a **project** (the master folder), and inside it one or more **apps** (units of functionality like login or reports). The **configuration folder** holds `settings.py`, where you register your apps, control `DEBUG`, and manage security. You prepare storage by running **`migrate`**, which builds the **database tables**. Your HTML **templates** live in a `templates` folder. When a browser requests `/something`, **`urls.py`** matches that address to a **view** (a function), which returns the page — and the server reports how it went with a **status code** like 200 (OK) or 404 (Not Found). That request-to-response loop is the heartbeat of every Django site.
+You open a terminal in your project folder, create and activate a **virtual environment** (so this project's tools stay isolated), then install Django with pip. You create a **project** (the master folder), and inside it one or more **apps** (units of functionality like login or reports). The **configuration folder** holds `settings.py`, where you register your apps, control `DEBUG`, and manage security. You prepare storage by running **`migrate`**, which builds the **database tables**. Your HTML **templates** live in a `templates` folder. When a browser requests `/something`, **`urls.py`** matches that address to a **view** (a function), which returns the page — and the server reports how it went with a **status code** like 200 (OK) or 404 (Not Found). That request-to-response loop is the heartbeat of every Django site.
