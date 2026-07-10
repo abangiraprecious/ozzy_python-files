@@ -9,3 +9,7 @@ print(f"{name} is {age} years old and goes to {school} for school")
 
 country = input("Country: ")
 print(f"Precious is from {country}")
+
+DoB = input("What year were you born: ")
+print(f"{name} was born in {DoB})")
+
