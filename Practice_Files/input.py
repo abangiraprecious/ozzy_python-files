@@ -13,3 +13,6 @@ print(f"Precious is from {country}")
 YearofB = input("What year were you born: ")
 print(f"{name} was born in {YearofB}")
 
+module = input("What is you module: ")
+print(f"Your Module is {module}")
+
